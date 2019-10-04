@@ -1,0 +1,61 @@
+relevant(adjective : sıfat ) : konuyla ilgili 
+prevents(verb:fiil ) önlemek, engel olmak, önüne geçmek (Members of the public were prevented from entering the building.)
+indicate(verb) göstermek
+restrictive(adjective) kısıtlayıcı sınırlayıcı. restrictive practices
+least(adverb:zarf) en aşağı en az. which car costs least
+corresponding (adjective) benzer veya ilişkili.
+declare(verb) :duyurmak, beyan etmek. to declare war 
+achieve(verb): başarmak,gerçekleştirmek
+
+encapsulation is implemetend by using access specifers
+Technically in encapsulation, the variables or data of a class are hidden from any other class and can be accessed only through any member function of own class in which they are declared.
+As in encapsulation, the data in a class is hidden from other classes, so it is also known as data-hiding.
+
+Advantages of Encapsulation:
+
+Data Hiding: The user will have no idea about the inner implementation of the class. It will not be visible to the user that how the class is stored values in the variables. He only knows that we are passing the values to accessors and variables are getting initialized to that value.
+Increased Flexibility: We can make the variables of the class as read-only or write-only depending on our requirement. If we wish to make the variables as read-only then we have to only use Get Accessor in the code. If we wish to make the variables as write-only then we have to only use Set Accessor.
+Reusability: Encapsulation also improves the re-usability and easy to change with new requirements.
+Testing code is easy: Encapsulated code is easy to test for unit testing.
+
+
+https://www.geeksforgeeks.org/c-sharp-encapsulation/
+
+____________________________________________________________________________________________________________________________________________________
+
+
+In the encapsulation technique, we declare the fields as private in the class to prevent other classes from accessing them directly. The required encapsulated data can be accessed by using access modifers
+
+How to achieve or implement Encapsulation in Java
+We can achieve encapsulation in Java in the following ways.
+1. Declaring the instance variable of the class as private. so that it cannot be accessed directly by anyone from outside the class.
+2. Provide the public setter and getter methods in the class to set/modify the values of the variable/fields.
+
+Advantages of Encapsulation in Java
+There are following advantages of encapsulation in Java. 
+1. The encapsulated code is more flexible and easy to change with new requirements.
+2. It prevents the other classes to access the private fields.
+3. Encapsulation allows modifying implemented code without breaking others code who have implemented the code.
+4. It keeps the data and codes safe from external inheritance. Thus, Encapsulation helps to achieve security.
+5. It improves the maintainability of the application.
+6. If you don't define the setter method in the class then the fields can be made read-only.
+7. If you don't define the getter method in the class then the fields can be made write-only.
+
+Disadvantages of Encapsulation in Java
+The main disadvantage of the encapsulation in Java is it increases the length of the code and slow shutdown execution.
+
+
+https://www.scientecheasy.com/2018/06/encapsulation-in-java-real-time-examples-advantages.html#targetText=Every%20Java%20class%20is%20an,encapsulate%20several%20combinations%20of%20medicine.
+
+____________________________________________________________________________________________________________________________________________________
+sorular
+
+s:encapsulation nedir?
+c:encapsulation classımızda yer alan elemanları(ethods,variables) kontrolü bir biçimde erişilebilmesini sağlamaya denir.
+s:peki bu kontrolü nasıl sağlarız
+c:bu kontrollü nasıl sağlarız access modifers(public,private,internal..)
+s:kontrolü sağlamaktan kastın nedir?
+c:gerçek hayattan örnek verirsek bir kahve mak düşünelim üzerinde on/off tuşları dışında ısı bilgisini gireceğimiz bir alan daha olduğunu var sayalım . bu durumda ısı son kullanıcı için yanlış kullanıma uygun bir nokta oluşturuyor.
+  classlarımız içinde aynı durum geçerli.Son kullanıcı gereksiz detaylarla uğraştırmadan belli attribute kullanıma sunmak kontrollün bizde olmasını sağlar.
+S:encapsulation data hiding midir.
+c:evet bir data hiding olabilir bir önceki soruda son kullanıcının bilmesine gerek olmayan dataları private tanımlayarak data hiding yapmış oluruz.
