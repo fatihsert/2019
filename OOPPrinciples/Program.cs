@@ -9,6 +9,10 @@ namespace OOPPrinciples
             Encapsulation.Rectangle rectangle = new Encapsulation.Rectangle();
             rectangle.SetHeigth(10);
             rectangle.SetWidth(20);
+
+            Abstraction.SpanControl spanControl = new Abstraction.SpanControl();
+            var output = spanControl.Output();
+
         }
     }
 }
