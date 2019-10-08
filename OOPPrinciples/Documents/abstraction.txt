@@ -1,18 +1,16 @@
+[dictionary]
+
 compulsory(adjective) zorunlu
 exposed (adjective)açık, korunmasız
 consume (verb) tüketmek bitirmek These lights don't consume much electricity.
 relevant (adjective) uygun,faydalı.relevant information
 exhibit-ed(verb)sergilemek she is exhibitin her horse
-reduces 
+reduces(verb) azaltmak, kısmak, indirmek. to reduce air pollution
 
 
-____________________________
-
-
+_______________________[Source 1]____________________________
 Data Abstraction is the property by virtue of which only the essential details are exhibited to the user. 
 In C# abstraction is achieved with the help of Abstract classes.
-
-
 
 Abstract Classes
 
@@ -23,10 +21,7 @@ Class that contains the abstract keyword with all of its methods is known as pur
 You are not allowed to declare the abstract methods outside the abstract class.
 You are not allowed to declare abstract class as Sealed Class.
 
-
-
 sometimes we want to create a superclass that only defines a generalized form that will be shared by all of its subclasses, leaving it to each subclass to fill in the details.
-
 
 
 Encapsulation vs Data Abstraction
@@ -37,18 +32,26 @@ It reduces the complexity of viewing the things.
 Avoids code duplication and increases reusability.
 Helps to increase security of an application or program as only important details are provided to the user.
 
-
-
 https://www.geeksforgeeks.org/c-sharp-abstraction/
 
-__________________________________________________________________________________
 
- Its main goal is to handle complexity by hiding unnecessary details from the user. That enables the user to implement more complex logic on top of the provided abstraction without understanding or even thinking about all the hidden complexity.
+
+_______________________[Source 2]____________________________
+
+Its main goal is to handle complexity by hiding unnecessary details from the user. That enables the user to implement more complex logic on top of the provided abstraction without understanding or even thinking about all the hidden complexity.
  
 
 
 https://stackify.com/oop-concept-abstraction/#targetText=Abstraction%20is%20one%20of%20the,unnecessary%20details%20from%20the%20user.
-______________________________________________
+
+
+_______________________[Source 3]____________________________
+
+
+
+
+https://www.scientecheasy.com/2019/05/java-abstraction-abstract-class.html
+_______________________[Note]____________________________
 
 türkçe karşılığı SOYUTLAMA anlaşıldığı gibi oluşturacağımız class içersinde tüketici ya da geliştiriciden methodların gövdesinin gizlenmesi.
 abstraction nedir?
