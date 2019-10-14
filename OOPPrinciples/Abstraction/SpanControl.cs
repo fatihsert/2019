@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOPPrinciples.Abstraction
+namespace OOP.Abstraction
 {
     public class SpanControl : BaseHtmlControl
     {
@@ -18,5 +18,6 @@ namespace OOPPrinciples.Abstraction
 
             return $"{startTag} {Text} {endTag}";
         }
+
     }
 }

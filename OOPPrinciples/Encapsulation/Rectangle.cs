@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOPPrinciples.Encapsulation
+namespace OOP.Encapsulation
 {
     public class Rectangle
     {

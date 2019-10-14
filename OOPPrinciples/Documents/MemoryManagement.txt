@@ -1,0 +1,89 @@
+﻿[Dictionary]
+reside (verb):ikamet etmek. my brother resides in Turkey
+distinguish (verb):ayırt etmek.children must learn to distinguish between right and wrong
+chunk(noun):büyük iri parça. a chunk of cheese
+orphan(verb):öksüz/yetim kalmak/olmak. she was orphaned at the age of six
+In order:sırasıyla
+assumption(noun):zan,sanı,varsayım.
+_______________________[Source 1]____________________________
+
+
+The Stack is more or less responsible for keeping track of what's executing in our code (or what's been "called").  
+The Heap is more or less responsible for keeping track of our objects (our data, well... most of it - we'll get to that later.).
+
+The Stack is self-maintaining, meaning that it basically takes care of its own memory management.  When the top box is no longer used, it's thrown out.  The Heap, on the other hand, has to worry about Garbage collection (GC) - which deals with how to keep the Heap clean (no one wants dirty laundry laying around... it stinks!).
+
+
+https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/
+
+
+
+
+[Note]
+
+.net ile yazılmış uygulamalarının memory management Garbage collection tarafında bizim yerimize memory manage etmekte .
+.net uygulamaları memory kullanımını 2 bölüme ayırmakta.bunlar stack ve heap
+stack bizim kodumuzun çalışma akışının bilgisini tutarken heap object bilgilerini tutar.
+stack aklımıza canlanması için bir bir kutunun içersine kutuların üst üste dizilmesi gibi düşünebiliriz.
+heap ise bir oda içersinde rastgele dağıtılmış kutular olarak düşünebiliriz.
+stack kendi management kendisi yapar çalıştırdığı kod memorysinden siler. hesap ise objectin pointer silinir ve bir sonraki alan ihtiyacında temizlenir.
+.netframeworkünde temel olarak 4 ana tip vardır bunlar value type,reference type,pointer ve instructions
+
+şöyle düşünelim. program nasıl çalışır nereden başlar.
+coğu program main methodunu arar ve bu main methodundan başlar. satır ve satır çalıştığını düşünelim.
+bir satıra geldik ve o satırda bir valuetype tipinde bir değişken tanımladığımızı varsayalım (int x=4) bu değer stack yerleştirilir.
+bir sonraki satırda ise reference type var diyelim. bu nesnenin kendisini heape adreslenir. adreside stackte tutulur.
+sebebi ise stack kısıtlı bir adres büyük dataların burada performans konusunda zorluklar yaşabiliriz.
+bir sonraki satırda bir method çağrısı bu method bir valuetype birde reference type parametresi aldığını düşünelim.
+önce value type parametresi stacke yerleştirilir. reference typelı parametreye ise referencetypelı değişkenin pointerı stack yerleştirir.
+yani farka bakacak olursak value type carbon copy olurken yani bellekte yeni bir alan açılırken reference type adresini kopyalanır.
+buradan çıkan sonuçta büyük alanlara sahip ve sürekli kopyalandığını düşünürsek stack stackoverflow hatası alabiliriz.
+structlar value typetır. bunun içersinde tanımayacağımız long tipindeki 30 değişken ile bunları 1000000000 gibi bir döngüye sokarsak memory exception alabiliriz.
+peki bunun yerine ne yapabiliriz. 1. olarak büyük boyuttaki value  typelarını taşıyacak,kopyalacak tanımlamardan kaçınalım.hatta buyük bir vauletypeımız var ise onu referencetype içinde tanımayalım.
+böyece heapte tutulmuş olur. herşeye rağmen kullanmak istiyorsakta kopyalaam işlemi yerine onun pointerı kopyalayalım. nasıl mı.
+parametre olarak vaule typeın başına "ref" ya da "out" koyarak.
+ref prefix sahip parametre önceden set edilmiş olması gerekir yani bir adresinn muhakkak olmaı gerekir aksi halde compiletimeda hata verir..bundan dolayı değer ata
+out prefx sahip parametrenin öncesinde herhangi bir adresi olmasına gerek yoktur fakat method içersinde girildiğinde out ile tanımlanmış parametrenin muhakkak bir adres atanması şarttır yoksa compiletimeda hata alır.
+
+
+
+value type(System.valuetype tan türemiştir.)
+
+bool
+byte
+char
+decimal
+double
+enum
+float
+int
+long
+sbyte
+short
+struct
+uint
+ulong
+ushort
+
+reference type(system.object ten türemiştir.)
+class
+interface
+delegate
+object
+string
+
+pointer 
+biraz karışık .net geliştirmelerinde pointerları direkt kullanmaya ihtiyaç duymuyoruz.
+bunu bizim yerimizi common language runtime hallediyor. temel olarak pointerlar bir nesnenin adresini tutar. 
+pointerlar stack ve heapte olabilir.
+
+hangi tipler nereye gider
+1. reference type herzaman heapte tutulur . çünkü stack sınırlı bir bellektir.
+bu yüzden nesnenin kendisi yerine o nesnenin pointerı tutulur.
+2. value type  ve pointerlar tanımlandıkları yere göre stack ya da heapte olabilirler.
+
+kopyalama problemi.
+örneğin bir nesnemiz var human ve bunun shoe diye bir nesnesi daha var eğer =human.shoe birine set edersek shoe reference type ise bu set etme işleminde adresini vermiş oluruz.
+böylece set ettiğimiz shoe değiştirdiği anda aslında set etmek için kullandığımız nesnede değişecek.çok istenilen bir durum değil bunun önüne nasıl geçerizz.çok basit new ile yeni nesne oluşturup set ederiz.tabi reference typelar için böyle  value typler oluşuyor.
+
+.net bunun için bir contract/interface sunuyor bize ICloneable bunu implement ederek contract methodunda gerekli kodları yazabiliriz.

@@ -1,0 +1,88 @@
+﻿[dictionary]
+derive(verb):bir şeyi bir şeyden türetmek/türemek.The name derives from Latin.
+implicitly(adjective):üsüt kapalı, ima yollu, imalı, gizli.an implicit threat
+belong(verb) ait olmak
+Prevent(verb) : önlemek,engel olmak
+Due(adjective):planlanan, beklenen, beklenmekte olan 
+due to: yüzünden /dolayı the train was late due to snow
+reduce(verb): azaltmak, kısmak, indirmek. to reduce air pollution
+tightly(adjective):sıkıca,sıkı ,dar. make sure the knot is tight
+
+_______________________[Source 1]____________________________
+
+It is a mechanism where you can to derive a class from another class for a hierarchy of classes that share a set of attributes and methods.
+
+https://stackify.com/oop-concept-inheritance/
+
+_______________________[Source 2]____________________________
+The technique of creating a new class by using an existing class functionality is called inheritance. 
+
+What we need to use Inheritance
+
+1. We can reuse the code from the base class.
+2. Using inheritance, we can increase the features of class or method by overriding.
+3. Inheritance is used to use the existing features of the class.
+
+
+
+What are the advantages of Inheritance in Java
+The advantages of inheritance in Java are as follows:
+1. One of the main advantages is that you can minimize the length of the duplicate code in an application by putting the common code in the superclass and sharing amongst several subclasses.
+2. Due to reducing the length of the code, redundancy of the application is also reduced. 
+3. Inheritance can also make application code more flexible to change because a class that inherits from the superclass, can be used interchangeably. Let's see a simple scenario.
+
+Scenario: 
+Suppose that a student has attributes like name, age, and location. This class exists for a long time. After some time, we need to add one attribute as pan card of the student. So what will we have all option?
+1. The first option is that we can modify the class student.
+2. The second option is we need to extend student class and add an attribute in the new class.
+➲ The first option is the violation of principles of java 'Java classes are not open for modifications'. So we should not modify the existing one. This will increase unit testing to be done again for the existing class.
+➲ The second option is without disturbing the existing class, we can add one variable to the other class by making a subclass. So only unit testing needs for the child class, not for the parent class.
+
+https://www.scientecheasy.com/2019/01/inheritance-in-java.html
+
+
+_______________________[Source 3]____________________________
+Advantages:-
+One of the key benefits of inheritance is to minimize the amount of duplicate code in an application by sharing common code amongst several subclasses. Where equivalent code exists in two related classes, the hierarchy can usually be refactored to move the common code up to a mutual superclass. This also tends to result in a better organization of code and smaller, simpler compilation units.
+Inheritance can also make application code more flexible to change because classes that inherit from a common superclass can be used interchangeably. If the return type of a method is superclass
+Reusability - facility to use public methods of base class without rewriting the same.
+Extensibility - extending the base class logic as per business logic of the derived class.
+Data hiding - base class can decide to keep some data private so that it cannot be altered by the derived class
+Overriding -With inheritance, we will be able to override the methods of the base class so that meaningful implementation of the base class method can be designed in the derived class.
+
+Disadvantages:-
+One of the main disadvantages of inheritance in Java (the same in other object-oriented languages) is the increased time/effort it takes the program to jump through all the levels of overloaded classes. If a given class has ten levels of abstraction above it, then it will essentially take ten jumps to run through a function defined in each of those classes
+Main disadvantage of using inheritance is that the two classes (base and inherited class) get tightly coupled.
+This means one cannot be used independent of each other.
+Also with time, during maintenance adding new features both base as well as derived classes are required to be changed. If a method signature is changed then we will be affected in both cases (inheritance & composition)
+If a method is deleted in the "super class" or aggregate, then we will have to re-factor in case of using that method.Here things can get a bit complicated in case of inheritance because our programs will still compile, but the methods of the subclass will no longer be overriding superclass methods. These methods will become independent methods in their own right.
+https://www.quora.com/What-are-advantages-of-inheritance-in-C++
+
+
+[Note]
+inheritance türkçe karşılığı kalıtım.  bir classın başka bir classtan türemesi ve türediği classın(protected ve public modifer sahip olan featureları) özelliklerini kendine göstermesidir.
+
+avantajları
+-kod tekrarlarının önüne geçer. türeyen class base classın özelliklerini direkt kullanarak kendi içersinde tekrardan kod yazmaz.
+--test maliyetini azaltır.
+--geliştirme sürecini hızlandırır
+--bakımı kolaylaştırır
+
+dezavantajı
+-iki classın birbirine sıkı sıkıya bağlanması 
+
+[soru&cevap]
+soru : inheritance hiyerarşik bir yapı kurmasak ne olur.
+kod tekrarı artar buna bağlı hata payı artar.bakımı zorlaşır maliyeti;(zaman ve kaynak) artar.
+soru : single inheritance ve multi inheritance nedir.
+single inheritance sadece tek bir class tan türemeyi multi ise birden fazla classtan türemeyi ifade eder.
+soru:c# multi inheritance desteklermi 
+hayır c# multi inherintace desteklemez. sebep olarak karmaşıklığı artırdığı bunu yanında kazanımları daha az olduğu düşünülmüş ve c# geliştiricileri bunu desteklememiştir.
+soru:is a ve has a relationship nedir?
+is a = inheritance 
+has a =composition
+soru:implicit inheritance nedir?
+implicit kelime manası üstü kapalı,örtülü anlamlarına gelir. bütün classlar önce object türer daha sonra developerın istediği doğrultusunda başka object türemiş classtan türetilebilir.
+soru:composition nedir ve inheritancedan farkı nedir
+composition bir classı başka bir classtan türetmek yerine bunu bir field olarak tanımlanması ve buşekilde kullanılmasıdır.
+inheritancedan farkıda türetmek yok aslında sahip olmak var.

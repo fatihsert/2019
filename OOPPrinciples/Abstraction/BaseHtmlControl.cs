@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOPPrinciples.Abstraction
+namespace OOP.Abstraction
 {
     public abstract class BaseHtmlControl
     {

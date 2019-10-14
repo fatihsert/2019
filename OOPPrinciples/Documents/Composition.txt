@@ -1,0 +1,30 @@
+﻿[dictionary]
+Composition(noun):karışım
+compose(verb):tanzim etmek,düzeltmek,oluşturmak
+approach(noun):yaklaşım
+_______________________[Source 1]____________________________
+
+
+As I explained in my article about encapsulation, Java supports different access modifiers. It’s a common best practice to use the private modifier for all attributes, including the ones that reference other objects, so that it can only be accessed within the same object. If you want to allow external access to an attribute, you need to implement a getter or setter method for it.
+https://stackify.com/oop-concepts-composition/
+
+_______________________[Source 2]____________________________
+
+5 Reasons to Use Composition over Inheritance in Java and OOP
+
+On composition, a class, which desire to use functionality of an existing class, doesn't inherit, instead it holds a reference of that class in a member variable, that’s why the name composition. Inheritance and composition relationships are also referred as IS-A and HAS-A relationships.
+
+1.One reason of favoring Composition over Inheritance in Java is fact that Java doesn't support multiple inheritance.
+
+
+https://javarevisited.blogspot.com/2013/06/why-favor-composition-over-inheritance-java-oops-design.html
+
+[note]
+composition aslında bir classın içerisinde başka classların instance oluşturmamıza denir.
+bazı durumlarda inheritance yerine composition kullanmak gerekir.
+composition has a ilişkisi vardır.
+car has a engine ,car has a break. car ı bir object olarak düşünürsek engine ve break aslında car içersinde tanımlanmış birer nesnedir.
+car is a vehicle . bu da inheritance bir örnek.
+
+
+]

@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "OOPPrinciples/1.0.0": {
+      "OOP/1.0.0": {
         "runtime": {
-          "OOPPrinciples.dll": {}
+          "OOP.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "OOPPrinciples/1.0.0": {
+    "OOP/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

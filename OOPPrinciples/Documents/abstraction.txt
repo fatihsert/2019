@@ -6,6 +6,7 @@ consume (verb) tüketmek bitirmek These lights don't consume much electricity.
 relevant (adjective) uygun,faydalı.relevant information
 exhibit-ed(verb)sergilemek she is exhibitin her horse
 reduces(verb) azaltmak, kısmak, indirmek. to reduce air pollution
+achieved(verb) başarmak. I've been working all day but i feel i've achieved nothing
 
 
 _______________________[Source 1]____________________________
@@ -51,11 +52,40 @@ _______________________[Source 3]____________________________
 
 
 https://www.scientecheasy.com/2019/05/java-abstraction-abstract-class.html
+
+
+_______________________[Source 3]____________________________
+
+!!!Abstraction hides complexity by giving you a more abstract picture, a sort of 10,000 feet view, while Encapsulation hides internal working so that you can change it later. In other words, Abstraction hides details at the design level, while Encapsulation hides details at the implementation level.
+
+There are also the different levels of Abstraction and it's good practice that classes should interact with other classes with the same level of abstraction or higher level of abstraction. As you increase the level of Abstraction, things start getting simpler and simpler because you leave out details.
+
+
+On the other hand, Encapsulation is all about implementation. Its sole purpose is to hide internal working of objects from outside world so that you can change it later without impacting outside clients.
+
+
+https://javarevisited.blogspot.com/2017/04/difference-between-abstraction-and-encapsulation-in-java-oop.html#targetText=2)%20Abstraction%20is%20about%20hiding,an%20object%20from%20outside%20world.
+
+
 _______________________[Note]____________________________
+Sorular
+Abstraction nedir?
+ oluşturduğumuz nesnelerin içersindeki detayların ve karmaşıklığını(methodların) kullanıcılardan gizlenmesi işlemdir.
+Detayları nasıl ve neden gizleriz?
+ kodlama yaparken bir çok nesne birbiri ile ilişki içersinde olur . 
+ Nesneler arasında kurulan iletişimin detayları kullanıcı için gereksizdir. sadece kullanıcının bileceği detayları kullanıcıya göstermek hem kafa karışıklığının ortadan kalmasına hemde kullanıcıyı gereksiz detaylar ile zaman kaybetmesine mani olacaktır.
+ örneğin arabaya bindiğimizde bize sunulan detaylar belli gaz, fren, vites vs.. ama bu birleşenlerin arkasında bir çok detay gizli ve kullanan kişinin bunları bilmesine gerek yok.
+ kullanıcı için önemli olan input ve output .
+ kodlamada bu gizliliği bu soyutlamayı access modiferslar ile sağlıyoruz.
+ne faydası var?
+1. ihtiyaç dışı detayların gizlenmesi sayesinde daha kullanılabilir bir nesnenin oluşturması.
+2. kod tekrarının ortadan kalkması. örneğin benim math classını tekradan yazmama gerek yok. hangi inputu alacağını ve nasıl bir output beklediğimi biliyorum ama kullandığım method neler yapıyor bilmiyorum ve gerekte yok.
+3. kod tekrarının ortadan kalması otomatik olarak kodların kısalması anlamına geliyor.
+4. kod bakımının maliyetini azaltır. örneğin kahve diye bir nesnemiz ve demle diye bir methodumuz olsun .Demle methodunda yapacağımız bir düzenleme bu methodu kullanan kişileri otomatikman etkiler ve kullanan kişilerin hiç birşey yapamsına gerek yok.
+  herkes kendi demle methodunu yazmış olsaydı bu özellik için bir çok yerde düzenleme yapmamız gerekebilirdi.
+5.4. maddeden dolayı test maliyetininde azalması sonuçta değişiklik 1 yerde ve sadece burayı test edeceğiz.
 
-türkçe karşılığı SOYUTLAMA anlaşıldığı gibi oluşturacağımız class içersinde tüketici ya da geliştiriciden methodların gövdesinin gizlenmesi.
-abstraction nedir?
-kullanıcının ihtiyacı kadar bilmesi ve bilmesine gerek olmayan detayların gizlenmesi diyebiliriz. örnek olarak her kullandığımız classın tüm detaylarını bilmek zorunda değiliz fonksiyonel olarak ne iş yaptığını ve bize nasıl bir sonuç vereceğini bilmemiz yeterli. yani input ve output bilsek yeterli .
-bunun bize faydası hızlı geliştirme,kod tekrarının önlenmesi . kod kalitesinin artması(tekrarı önlüyoruz ve tek bir noktadan düzenleme yaptığımız için bulgu olasılğını düşürüyoruz). maintance kolaylaştırıoyruz. heryerde değişiklik yapmadan tek bir noktada değişiklik yaparak bu değişiklik yaptığınız diğer noktalarında bundan doğrudan faydalanmasını sağlıyoruz.
+encapsulationdan farkı ne?
+abstraction karmaşıklığı gizlerken ,encapsulation iç işleyişi gizler.
 
-
+Abstraction hides complexity by giving you a more abstract picture, a sort of 10,000 feet view, while Encapsulation hides internal working so that you can change it later. In other words, Abstraction hides details at the design level, while Encapsulation hides details at the implementation level.

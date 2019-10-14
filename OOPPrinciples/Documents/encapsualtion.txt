@@ -1,3 +1,5 @@
+[dictionary]
+
 relevant(adjective : sıfat ) : konuyla ilgili 
 prevents(verb:fiil ) önlemek, engel olmak, önüne geçmek (Members of the public were prevented from entering the building.)
 indicate(verb) göstermek
@@ -6,6 +8,8 @@ least(adverb:zarf) en aşağı en az. which car costs least
 corresponding (adjective) benzer veya ilişkili.
 declare(verb) :duyurmak, beyan etmek. to declare war 
 achieve(verb): başarmak,gerçekleştirmek
+
+_______________________[Source 1]____________________________
 
 encapsulation is implemetend by using access specifers
 Technically in encapsulation, the variables or data of a class are hidden from any other class and can be accessed only through any member function of own class in which they are declared.
@@ -21,7 +25,7 @@ Testing code is easy: Encapsulated code is easy to test for unit testing.
 
 https://www.geeksforgeeks.org/c-sharp-encapsulation/
 
-____________________________________________________________________________________________________________________________________________________
+_______________________[Source 2]____________________________
 
 
 In the encapsulation technique, we declare the fields as private in the class to prevent other classes from accessing them directly. The required encapsulated data can be accessed by using access modifers
@@ -51,7 +55,7 @@ ________________________________________________________________________________
 sorular
 
 s:encapsulation nedir?
-c:encapsulation classımızda yer alan elemanları(ethods,variables) kontrolü bir biçimde erişilebilmesini sağlamaya denir.
+c:encapsulation classımızda yer alan elemanları(Methods,variables) kontrolü bir biçimde erişilebilmesini sağlamaya denir.
 s:peki bu kontrolü nasıl sağlarız
 c:bu kontrollü nasıl sağlarız access modifers(public,private,internal..)
 s:kontrolü sağlamaktan kastın nedir?
