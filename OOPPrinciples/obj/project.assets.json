@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Development\\2019\\OOPPrinciples\\OOPPrinciples.csproj",
+      "projectUniqueName": "F:\\Development\\2019\\OOPPrinciples\\OOP.csproj",
       "projectName": "OOP",
-      "projectPath": "F:\\Development\\2019\\OOPPrinciples\\OOPPrinciples.csproj",
+      "projectPath": "F:\\Development\\2019\\OOPPrinciples\\OOP.csproj",
       "packagesPath": "C:\\Users\\fatih\\.nuget\\packages\\",
       "outputPath": "F:\\Development\\2019\\OOPPrinciples\\obj\\",
       "projectStyle": "PackageReference",

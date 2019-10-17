@@ -1,0 +1,39 @@
+﻿[Dictionary]
+consider(verb):enine boyuna düşünmek, dikkatle değerlendirmek. have you considered surgery?
+ overstate(verb):abartmak
+ imply(ies,ied,verb):ima etmek.
+ advice(verb) :tavsiye etmek. -advisable(adjective:): akla uyun,tayfsiye edileblir.
+ Gather(verb):toplamak. crowds of fans
+_______________________[Source 1]____________________________
+
+a class should have only one reason to change.
+
+
+https://www.oodesign.com/single-responsibility-principle.html
+_______________________[Source 2]____________________________
+
+
+ 
+The argument for the single responsibility principle is relatively simple: it makes your software easier to implement and prevents unexpected side-effects of future changes.
+
+You can avoid these problems by asking a simple question before you make any changes: What is the responsibility of your class/component/microservice?
+https://stackify.com/solid-design-principles/
+
+_______________________[Source 3*** çok iyi makale.]____________________________
+
+
+
+
+robert martin
+"On the face of it, he would seem to be saying that the SRP is just about where a class has functionality that belongs in two different layers or modules, it should be split"
+
+
+https://hackernoon.com/you-dont-understand-the-single-responsibility-principle-abfdd005b137
+
+
+
+srp nedir ve ne işe yarar neden kodlama yaparken buna dikkat etmeliyiz. bize yararı ve zararı needir
+
+one responsibility or one reasonto change?
+srp bir classsın tek sorumluluğunda olması gerektiğinimi söylüyor yoksa değişmek için tek bir sebebi mi olması gerekiyor.
+

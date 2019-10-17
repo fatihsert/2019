@@ -46,6 +46,15 @@ namespace OOP
             test.ValueTypeParameter();
 
             MemoryManagement.CopyProblemTest.Go();
+            MemoryManagement.CopyProblemTest c = new MemoryManagement.CopyProblemTest();
+            var bla = c.ToString();
+            var ttl = GC.GetTotalMemory(true);
+            var allc = GC.GetAllocatedBytesForCurrentThread();
+            var gc=GC.CollectionCount(0); ;
+            var gc1=GC.CollectionCount(1); ;
+            var gc2 = GC.CollectionCount(2);
+            GC.SuppressFinalize(c);
+            
             Console.ReadLine();
         }
  

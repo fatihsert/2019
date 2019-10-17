@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP.MemoryManagement
 {
-   // public struct Shoe
+    // public struct Shoe
 
     public class Shoe
     {
@@ -31,6 +31,10 @@ namespace OOP.MemoryManagement
 
     class CopyProblemTest
     {
+        ~CopyProblemTest()
+        {
+
+        }
        public static void Go()
         {
             Dude Bill = new Dude();

@@ -1,0 +1,10 @@
+F:\Development\2019\OOPPrinciples\bin\Debug\netcoreapp3.0\OOP.exe
+F:\Development\2019\OOPPrinciples\bin\Debug\netcoreapp3.0\OOP.deps.json
+F:\Development\2019\OOPPrinciples\bin\Debug\netcoreapp3.0\OOP.runtimeconfig.json
+F:\Development\2019\OOPPrinciples\bin\Debug\netcoreapp3.0\OOP.runtimeconfig.dev.json
+F:\Development\2019\OOPPrinciples\bin\Debug\netcoreapp3.0\OOP.dll
+F:\Development\2019\OOPPrinciples\bin\Debug\netcoreapp3.0\OOP.pdb
+F:\Development\2019\OOPPrinciples\obj\Debug\netcoreapp3.0\OOP.AssemblyInfoInputs.cache
+F:\Development\2019\OOPPrinciples\obj\Debug\netcoreapp3.0\OOP.AssemblyInfo.cs
+F:\Development\2019\OOPPrinciples\obj\Debug\netcoreapp3.0\OOP.dll
+F:\Development\2019\OOPPrinciples\obj\Debug\netcoreapp3.0\OOP.pdb

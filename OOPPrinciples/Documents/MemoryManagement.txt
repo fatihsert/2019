@@ -5,6 +5,7 @@ chunk(noun):büyük iri parça. a chunk of cheese
 orphan(verb):öksüz/yetim kalmak/olmak. she was orphaned at the age of six
 In order:sırasıyla
 assumption(noun):zan,sanı,varsayım.
+treat(ed)(verb):davranmak,muamele etmek. he treats her realy badly
 _______________________[Source 1]____________________________
 
 
@@ -14,7 +15,22 @@ The Heap is more or less responsible for keeping track of our objects (our data,
 The Stack is self-maintaining, meaning that it basically takes care of its own memory management.  When the top box is no longer used, it's thrown out.  The Heap, on the other hand, has to worry about Garbage collection (GC) - which deals with how to keep the Heap clean (no one wants dirty laundry laying around... it stinks!).
 
 
+This is how the GC determines what to keep as well. It receives a list of "root" object references to keep from just-in-time (JIT) compiler and common language runtime (CLR) (Remember Joe and Claire?) and then recursively searches object references to build a graph of what should be kept. 
+
 https://www.c-sharpcorner.com/article/C-Sharp-heaping-vs-stacking-in-net-part-i/
+
+
+
+
+
+_______________________[Source 2]____________________________
+
+
+GC works on managed heap, which is nothing but a block of memory to store objects, when garbage collection process is put in motion, it checks for dead objects and the objects which are no longer used, then it compacts the space of live object and tries to free more memory.
+
+
+
+https://www.codeproject.com/Articles/1095402/Garbage-Collection-and-Csharp#targetText=GC%20works%20on%20managed%20heap,tries%20to%20free%20more%20memory.
 
 
 
@@ -87,3 +103,17 @@ kopyalama problemi.
 böylece set ettiğimiz shoe değiştirdiği anda aslında set etmek için kullandığımız nesnede değişecek.çok istenilen bir durum değil bunun önüne nasıl geçerizz.çok basit new ile yeni nesne oluşturup set ederiz.tabi reference typelar için böyle  value typler oluşuyor.
 
 .net bunun için bir contract/interface sunuyor bize ICloneable bunu implement ederek contract methodunda gerekli kodları yazabiliriz.
+
+___________________________________
+başka bir soruyu detaylandıralım. static&global değişkenler bellekte nasıl tutulur.
+bizim yerimize belleğin yönetimi yapan garbage collectiona yardımcı olabilirmiyiz.
+garbage collection görevi çöpleri dışarı çıkarmak. bu görevde hangisinin dışarı çıkarılacağına hangisin çıkarılmayacağına karar vermesi gerekir.
+bunun için "root" isimli bir liste oluştur
+ilk olarak kullanılmayan herşey çöptür.sonrasında kullanılanlan temel nesneleri bu listeye ekliyoruz.örneğin bir tv miz var bunu kullanıyorsak listeye ekliyoruz
+tabi buna bağlı olan tv kumandasınıda atmıyoruz. bunu nasıl yapıyor root list içersinde  recursively şekilde dolaşarak ilgili refernce olan nesneler buluyor .
+static değişkenlerde bu root liste tutulur ve bunlara gc müdahale etmez.
+gc yardımcı olmak için iki yol var biri idisposable interface diğeride finalizer(deconstructor).
+
+gc collectiona neden yardımcı olalım sonuçta heap management onda değil mi? evet öyle fakat gc sadece managed kodları manage edebiliyor non-managed(database connection,network,file io gibi com objectlerini) objectleri herhangi bir şekilde müdahale edemiyor.
+örneğin file io yapan bir classımız var biz bunu sonlandırmazsak uygulama boyunca gc onu temizlemez. bunun için finalizer yada idisposable kullanacaz.
+
