@@ -27,13 +27,24 @@ _______________________[Source 3*** çok iyi makale.]___________________________
 robert martin
 "On the face of it, he would seem to be saying that the SRP is just about where a class has functionality that belongs in two different layers or modules, it should be split"
 
+Gather together the things that change for the same reasons. Separate those things that change for different reasons.
 
 https://hackernoon.com/you-dont-understand-the-single-responsibility-principle-abfdd005b137
 
 
+[Note]
 
 srp nedir ve ne işe yarar neden kodlama yaparken buna dikkat etmeliyiz. bize yararı ve zararı needir
+srp bir classın tek bir sorumluluğa sahip olmasıdır. sorumluluk derken bir işi yapıyor olması eğer bir database işlemi yapıyorsa sadece database,eğer bir raporlama yapıyorsa raporlama işini yapıyor olmasıdır
+srp kodlama yaparken modulerli sağlamamız için önemli herşeyin bir arada olduğu tek bir modül yerine bir birinde ayrı sorumlulukta nesneler oluşturulması bizim için bakım kolaylı vve maliyet azlığı saylar.
+zararı yok.
 
-one responsibility or one reasonto change?
+one responsibility or one reason to change?
 srp bir classsın tek sorumluluğunda olması gerektiğinimi söylüyor yoksa değişmek için tek bir sebebi mi olması gerekiyor.
+srp bir classın tek gerektiğini söylüyor. o sorumluluğa ait birden fazla değişim olabilir.
 
+yazılımı nasl izole ederiz? kodumuzda bir değişiklik istedikleri zaman bunu diğerleri etklenmeden nasıl yaparız.
+srp diyorki sorumluluk ne kadar az ise bakımı ve maliyeti(test) o kadar az olur 
+bir class kaç method sahip olmalı? ne kadar az olursa okadar iyi
+temel olay bakım
+robert c martin. sp lerin srp tamamiyle ihlal ettiğini söylüyor.sebebi ise bussiness rule ın database olması

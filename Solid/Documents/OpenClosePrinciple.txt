@@ -1,0 +1,118 @@
+﻿[Dictionary]
+frequent(adjective): sık sık. i am a frequent visitor to EU
+involve(verb): b1: gerektirmek,icap etmek.the trips often involve a lot of walking
+ 
+(un)desire(d)(verb):arzu etmek.there is a strong desire for peace among the peope.
+
+relatively(adjective):nispeten,nazaran. eating out is relatively cheap.
+satisfactory (adjective):memnun edici, we hope very much to find a satisfactory solution to the problem.
+
+_______________________[Source 1]____________________________
+
+
+
+Bertrand Meyer states:
+Software entities like classes, modules and functions should be open for extension but closed for modifications.
+
+Bob c martin
+You should be able to extend the behavior of a system without having to modify that system.
+
+There are several disadvantages:
+
+for each new shape added the unit testing of the GraphicEditor should be redone.
+when a new type of shape is added the time for adding it will be high since the developer who add it should understand the logic of the GraphicEditor.
+adding a new shape might affect the existing functionality in an undesired way, even if the new shape works perfectly
+ 
+	 
+// Open-Close Principle - bad example
+ class GraphicEditor {
+ 
+ 	public void drawShape(Shape s) {
+ 		if (s.m_type==1)
+ 			drawRectangle(s);
+ 		else if (s.m_type==2)
+ 			drawCircle(s);
+ 	}
+ 	public void drawCircle(Circle r) {....}
+ 	public void drawRectangle(Rectangle r) {....}
+ }
+ 
+
+
+ 
+// Open-Close Principle - Good example
+ class GraphicEditor {
+ 	public void drawShape(Shape s) {
+ 		s.draw();
+ 	}
+ }
+ 
+ class Shape {
+ 	abstract void draw();
+ }
+ 
+ class Rectangle extends Shape  {
+ 	public void draw() {
+ 		// draw the rectangle
+ 	}
+ } 
+
+ Conclusion
+Like every principle OCP is only a principle. Making a flexible design involves additional time and effort spent for it and it introduce new level of abstraction increasing the complexity of the code. So this principle should be applied in those area which are most likely to be changed.
+
+https://www.oodesign.com/open-close-principle.html
+
+
+
+
+_______________________[Source 2]____________________________
+
+
+
+But as we’ve learned over the years and as other authors explained in great details, e.g., Robert C. Martin in his articles about the SOLID principles or Joshua Bloch in his book Effective Java, inheritance introduces tight coupling if the subclasses depend on implementation details of their parent class.
+
+That’s why Robert C. Martin and others redefined the Open/Closed Principle to the Polymorphic Open/Closed Principle. It uses interfaces instead of superclasses to allow different implementations which you can easily substitute without changing the code that uses them. The interfaces are closed for modifications, and you can provide new implementations to extend the functionality of your software.
+
+https://stackify.com/solid-design-open-closed-principle/
+
+
+
+
+_______________________[Source 2]____________________________
+
+
+
+
+https://hackernoon.com/why-the-open-closed-principle-is-the-one-you-need-to-know-but-dont-176f7e4416d
+
+_______________________[Source 3]____________________________
+
+
+https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html
+
+
+[note]
+
+
+
+en iyi örneği plugin Architecture
+
+??
+open/close principle nedir,ne işe yarar,neden dikkat etmeliyiz. asıl amacı nedir.open closed ihlalini nasıl anlarız. nasıl bi çözüm bulabiliriz.
+
+open close principle kodularımızın değişimlere kapalı, gelişime açık olmasını ifade ediyor.değişim derken class a yeni bir method eklemekte mi değişim? bu noktada şunu belirtmek gerekiyor.
+değişim derken mevcut kodlar üzerinde yapılacak olan herhangi değişimi kast ediyor.yeni bir method eklediğmizde aslında o gelişim olmuş oluyor.ne olacak mevcut methodu değiştirsek? bu methodu tüketen kodların hepsinin testinin yapılması gerekiyor bu bir maliyet.
+hemde baya gereksiz bir maliyet.örneğin bir kütüphane yazdığımızı düşünelim. bu kütüphaneyi kullanan 3. kişiler var benim bu kütüphanede yapacağım herhangi bir değişiklik bu kişileri direkt olarak etkileyecek.
+kullandıkları bir method yapacağım değişiklik tüm kullanıcılara ek bir test maliyeti oluşturakacak hatta kullanalanlar herhangi bir değişiklik yapmasa bile.
+bundan dolayı kodlarımız değişikliğe kapalı ama gelişmeye açık olmalı.yeni bir fetuare kazandırdığımızda kütüphanemizi tüketenler kendi ihtiyaçları doğrultusunda bunu kullanabilir.
+ama mevcut üzerinde değişiklik kontrol etmelerini onlara koşul kılar. tam bir itibar kaybı.
+
+ne işe yarar : ocp bakış açı ile yazdığımızda aslına bize katkısı çok yönlü düşünmek bir mehtod ilerisi düşünerek ona uygun yazmamızı sağlar.daha moduler bir yapı sağlamış oluruz. tüm solid prensiplerinede olduğu gibi bakımı kolay maliyeti düşük geliştirmeler yapabiliriz.
+
+neden dikkat etmeliyiz:yani basit kaliteli,öngörülü kod yazarken kullanan kişilerinde ileriye dönük istemsiz çıkabilecek maliyetlerini azaltmış oluruz. hemde sistemimize yeni featureların eklenmesi çok hızlı olur.
+
+aslın amacı tüm solid ile ortak. bakımı kolay maliyeti düşük kodlar geliştirmek.maliyet=test+geliştirme.
+
+ocp ihlalini nasıl anlarız: bir classımızın olduğunu düşünelim siz buna yeni bir özellik eklemek isterseniz ve bunu yaparken mevcut kodlar üzerinde bir değişiklik yapma ihtiyacı duyuyorsanız aslında ocp ihlal etmiş olursunuz.
+çözüm olarak interface&abstraction,composition&inheritance.
+
