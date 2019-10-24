@@ -4,7 +4,6 @@ F:\Development\2019\DesignPatterns\bin\Debug\netcoreapp3.0\DesignPatterns.runtim
 F:\Development\2019\DesignPatterns\bin\Debug\netcoreapp3.0\DesignPatterns.runtimeconfig.dev.json
 F:\Development\2019\DesignPatterns\bin\Debug\netcoreapp3.0\DesignPatterns.dll
 F:\Development\2019\DesignPatterns\bin\Debug\netcoreapp3.0\DesignPatterns.pdb
-F:\Development\2019\DesignPatterns\obj\Debug\netcoreapp3.0\DesignPatterns.csprojAssemblyReference.cache
 F:\Development\2019\DesignPatterns\obj\Debug\netcoreapp3.0\DesignPatterns.AssemblyInfoInputs.cache
 F:\Development\2019\DesignPatterns\obj\Debug\netcoreapp3.0\DesignPatterns.AssemblyInfo.cs
 F:\Development\2019\DesignPatterns\obj\Debug\netcoreapp3.0\DesignPatterns.dll

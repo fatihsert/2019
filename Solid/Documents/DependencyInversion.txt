@@ -1,0 +1,74 @@
+﻿[Dictionary]
+Dependency(noun) :bağımlılık, yardıma muhtaç olma
+
+invert(verb):ters yüz etmek, baş aşağı döndürmek . inversion: tersine çevirme.
+conventional(adjective) geleneksel,tutucu,değişme açık olmayan. conventional farming.
+establish
+corresponding(adjective):benzer veya ilişkili.corresponding classes
+Regarding(preposition) :...konusunda,hususunda,hakkında. i am writing to you regarding your application dated 29 april.
+
+Thus(adverb):böylece bu nedenle
+appear(verb):gibi gözükmek. she appeared to be crying
+explicitly : açıkça
+fragile(adjective):kırılgan,kolay ve çabuk kırılan .a fragile economy
+apparent(adjective):aşikar,açık,görnen
+
+_______________________[Source 1]____________________________
+The principle states:[1]
+
+High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g. interfaces).
+Abstractions should not depend on details. Details (concrete implementations) should depend on abstraction
+
+wikipedia
+
+
+_______________________[Source 2]____________________________
+Conclusion
+When this principle is applied it means the high level classes are not working directly with low level classes, they are using interfaces as an abstract layer. In this case instantiation of new low level objects inside the high level classes(if necessary) can not be done using the operator new. Instead, some of the Creational design patterns can be used, such as Factory Method, Abstract Factory, Prototype.
+
+The Template Design Pattern is an example where the DIP principle is applied.
+
+Of course, using this principle implies an increased effort, will result in more classes and interfaces to maintain, in a few words in more complex code, but more flexible. This principle should not be applied blindly for every class or every module. If we have a class functionality that is more likely to remain unchanged in the future there is not need to apply this principle.
+
+
+https://www.oodesign.com/dependency-inversion-principle.html
+
+_______________________[Source 3]____________________________
+
+
+you only need to consequently apply the Open/Closed and the Liskov Substitution principles to your code base. After you have done that, your classes also comply with the Dependency Inversion Principle. This enables you to change higher-level and lower-level components without affecting any other classes, as long as you don’t change any interface abstractions.
+https://stackify.com/dependency-inversion-principle/
+
+
+
+_______________________[Source 4]____________________________
+
+Abstractions should not depend on details. Details should depend on abstractions.
+örnek anlaşılır.
+https://medium.com/@kedren.villena/simplifying-dependency-inversion-principle-dip-59228122649a
+
+
+_______________________[Source 4]____________________________
+Key points:
+Dependency Injection is an implementation of Dependency Inversion Principle.
+One of the ways to achieve Open-Close Principle is to use Dependency Inversion Principle.
+High-level modules in DIP are modules that appear on the higher part of the UML diagram and depends on the abstraction layer. Abstractions are the ones in the center of the diagram. Low-level modules are the ones in the lower level of the diagram and are the actual implementations of the abstraction layer.
+https://medium.com/@kedren.villena/simplifying-dependency-inversion-principle-dip-59228122649a
+
+
+[note]
+dependency inversion: bağımlılıkları tersine çevirme diye çevirebiliriz. genel tanımlarda iki level modülden bahsediliyor biri high diğeri low.
+high level olarak business yapan olarak düşünülürken low levelda high levelda kullanılan classlar(top down approach in uml şeklinde düşündüğümüzde üst kısımda kalan class high aşağıda kalan classlar low)
+dependency inversion diyorki high level olan bir modül low level a direkt erişmemeli.bunun yerine abstraction üzerinden ilerlenmeli böylece low level da olabilecek bir değişiklik
+high level doğrudan etkilemeyecek.high level da low level doğrudan müdahalede bulunmayacak. [source 2] deki basit örnek aslında gayet net göz at.
+daha düz bir ifade ile daha sonra yeni özellikler kazanabilecek classların kendisini referans olarak vermek yerine ikisinde bağlı olacağı bir interface kullanmak copuling azaltır.
+
+dependency inversion principle bize 2 temel kural sunuyor.(wiki)
+
+1.High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g. interfaces).
+high level modül low level modüle direkt bağlı olmamalı ikisidde sadece abstraction bağlı olmalı
+
+Abstractions should not depend on details. Details (concrete implementations) should depend on  abstraction
+soyutlamalar detaylara bağlı olmamalı .detaylar soyutlaramalara bağlı olmalı.
+detaylar concrete class içersinde tanımlanmalı abstrction bu detayları vermek birden fazla farklığıa sebeb olabilir.
+

@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solid", "Solid\Solid.csproj", "{EA11459F-7E01-4980-914A-40BB0A50EA52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrivenDevelopment", "TestDrivenDevelopment\TestDrivenDevelopment.csproj", "{33835B0E-ADBD-4512-9B52-E4E3C7ED8E70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EA11459F-7E01-4980-914A-40BB0A50EA52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA11459F-7E01-4980-914A-40BB0A50EA52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA11459F-7E01-4980-914A-40BB0A50EA52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33835B0E-ADBD-4512-9B52-E4E3C7ED8E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33835B0E-ADBD-4512-9B52-E4E3C7ED8E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33835B0E-ADBD-4512-9B52-E4E3C7ED8E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33835B0E-ADBD-4512-9B52-E4E3C7ED8E70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

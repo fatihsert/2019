@@ -1,0 +1,29 @@
+﻿[Dictionary]
+substitute(verb): yerine koymak,yerine kullanmak. you can substitute pasta for the rice,if you prefer.
+consequences(noun):sonuç ,netice.if you make him angry, you'll have to suffer the consequences
+therefore(adverb):onun için,bu nedenle
+_______________________[Source 1]____________________________
+
+The LSP says that the code should work without knowing the actual class of the Bird object. 
+
+
+https://www.tomdalling.com/blog/software-design/solid-class-design-the-liskov-substitution-principle/
+
+_______________________[Source 2]____________________________
+
+The LSP allows us to use polymorphism reliably.
+Polymorphism is a key way to avoid repetition in code as it allows you to maximize the generality of the code you are writing. In the language of the LSP definition, you want to write code that puts the minimum requirements in terms of provable properties on the objects the code is processing.
+
+
+we have seen it is highly likely our core code will rely implicitly on ‘properties provable’ about our abstraction which are not enforced on concrete implementations of it.
+
+
+https://medium.com/hackernoon/the-liskov-substitution-principle-and-why-you-might-want-to-enforce-it-6f5bbb05c06d
+
+[note] 
+basit anlamada liskov substitution principle amacı inheritance doğru bir şekilde uygulamak. ne demek bu ? bir base class oluşturduk diye onun herşeyi base koymamız gerekiyor.
+ee ne yapacağız? hiyeraşiyi daha düzgün bir biçimde kuracağız.derived class ile base classın sorumlulukları aynı olsun.
+liskov demişki bir base classı oluşturdun bu classın amacına uygun özellikler ekleki ilerde bu classtan türeyecek derived classlara saçma özellikler kazandırmasın.
+
+liskovu bozan durumlardan biride eğer bir class başka bir classtan türüyor ve türediği classın bir özelliğini kendine göre değiştiriyor ise bu liskovu bozuyor demektir.
+çünkü türediği class aslında kendinde bulunmaması gereken ya da farklı bir noktaya götüren özellikği kazandırmış oluyor buda liskovu bozuyor.

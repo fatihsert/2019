@@ -4,7 +4,6 @@ F:\Development\2019\Solid\bin\Debug\netcoreapp3.0\Solid.runtimeconfig.json
 F:\Development\2019\Solid\bin\Debug\netcoreapp3.0\Solid.runtimeconfig.dev.json
 F:\Development\2019\Solid\bin\Debug\netcoreapp3.0\Solid.dll
 F:\Development\2019\Solid\bin\Debug\netcoreapp3.0\Solid.pdb
-F:\Development\2019\Solid\obj\Debug\netcoreapp3.0\Solid.csprojAssemblyReference.cache
 F:\Development\2019\Solid\obj\Debug\netcoreapp3.0\Solid.AssemblyInfoInputs.cache
 F:\Development\2019\Solid\obj\Debug\netcoreapp3.0\Solid.AssemblyInfo.cs
 F:\Development\2019\Solid\obj\Debug\netcoreapp3.0\Solid.dll
